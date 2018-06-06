@@ -13,12 +13,12 @@ import java.util.List;
 public class MyViewPagerAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> list_fragment;//fragment列表
-    private List<String> list_Title;//tab名的列表
+//    private List<String> list_Title;//tab名的列表
 
-    public MyViewPagerAdapter(FragmentManager fm, List<Fragment> list_fragment, List<String> list_Title) {
+    public MyViewPagerAdapter(FragmentManager fm, List<Fragment> list_fragment) {
         super(fm);
         this.list_fragment = list_fragment;
-        this.list_Title = list_Title;
+//        this.list_Title = list_Title;
     }
 
     @Override
@@ -31,9 +31,9 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
         return list_fragment.size();
     }
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return list_Title.get(position % list_Title.size());
-    }
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        return list_Title.get(position % list_Title.size());
+//    }
 
 }

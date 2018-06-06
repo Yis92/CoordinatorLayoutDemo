@@ -4,7 +4,10 @@
     android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@android:color/white">
+
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -24,6 +27,7 @@
                 android:layout_height="250dp"
                 android:background="@color/colorAccent" />
 
+
         </LinearLayout>
 
     </android.support.design.widget.AppBarLayout>
@@ -36,18 +40,45 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tab_layout"
+        <RadioGroup
+            android:id="@+id/rg_tab"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:background="@drawable/tab_shape"
-            app:tabBackground="@drawable/tablayout_background"
-            app:tabIndicatorColor="@android:color/transparent"
-            app:tabSelectedTextColor="#666666"
-            app:tabTextAppearance="@style/MyTabLayoutTextAppearanceInverse"
-            app:tabTextColor="#666666" />
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_jk"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_rb_left"
+                android:button="@null"
+                android:gravity="center"
+                android:text="借款" />
+
+            <RadioButton
+                android:id="@+id/rb_xyk"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_rb_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="信用卡" />
+        </RadioGroup>
+
+        <!--<android.support.design.widget.TabLayout-->
+            <!--android:id="@+id/tab_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:background="@drawable/tab_shape"-->
+            <!--app:tabBackground="@drawable/tablayout_background"-->
+            <!--app:tabIndicatorColor="@android:color/transparent"-->
+            <!--app:tabSelectedTextColor="#666666"-->
+            <!--app:tabTextAppearance="@style/MyTabLayoutTextAppearanceInverse"-->
+            <!--app:tabTextColor="#666666" />-->
 
         <View
             android:layout_width="match_parent"
